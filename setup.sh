@@ -4,15 +4,50 @@
 
 # Grant permissions to Cellar directory
 logger -s "Recursively setting user permissions in /usr/local..."
-sudo chown -R $(whoami) /usr/local/Cellar
-sudo chown -R $(whoami) /usr/local/bin/brew
-sudo chown -R $(whoami) /usr/local/share/man
-sudo chown -R $(whoami) /usr/local/share/zsh
-sudo chown -R $(whoami) /usr/local/etc/bash_completion.d/brew
-sudo chown -R $(whoami) /usr/local/Homebrew
-sudo chown -R $(whoami) /usr/local/var/Homebrew
-sudo chown -R $(whoami) /usr/local/lib/python2.7
-sudo chown -R $(whoami) /usr/local/lib/python3.7
+if [ -d "/usr/local/Cellar" ]; then
+  # Control will enter here if $DIRECTORY exists.
+  sudo chown -R $(whoami) /usr/local/Cellar
+fi
+
+if [ -d "/usr/local/bin/brew" ]; then
+  # Control will enter here if $DIRECTORY exists.
+  sudo chown -R $(whoami) /usr/local/bin/brew
+fi
+
+if [ -d "/usr/local/share/man" ]; then
+  # Control will enter here if $DIRECTORY exists.
+  sudo chown -R $(whoami) /usr/local/share/man
+fi
+
+if [ -d "/usr/local/share/zsh" ]; then
+  # Control will enter here if $DIRECTORY exists.
+  sudo chown -R $(whoami) /usr/local/share/zsh
+fi
+
+if [ -d "/usr/local/etc/bash_completion.d/brew" ]; then
+  # Control will enter here if $DIRECTORY exists.
+  sudo chown -R $(whoami) /usr/local/etc/bash_completion.d/brew
+fi
+
+if [ -d "/usr/local/Homebrew" ]; then
+  # Control will enter here if $DIRECTORY exists.
+  sudo chown -R $(whoami) /usr/local/Homebrew
+fi
+
+if [ -d "/usr/local/var/Homebrew" ]; then
+  # Control will enter here if $DIRECTORY exists.
+  sudo chown -R $(whoami) /usr/local/var/Homebrew
+fi
+
+if [ -d "/usr/local/lib/python2.7" ]; then
+  # Control will enter here if $DIRECTORY exists.
+  sudo chown -R $(whoami) /usr/local/lib/python2.7
+fi
+
+if [ -d "/usr/local/lib/python3.7" ]; then
+  # Control will enter here if $DIRECTORY exists.
+  sudo chown -R $(whoami) /usr/local/lib/python3.7
+fi
 
 # Install Homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
