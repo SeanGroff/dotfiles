@@ -3,7 +3,8 @@
 # PRE-EXECUTION - sudo chmod 755 setup.sh
 
 # Grant permissions to Cellar directory
-sudo chown -R $(whoami) /usr/local/Cellar
+logger -s "Recursively setting user permissions in /usr/local..."
+sudo chown -R $(whoami) /usr/local
 
 # Install Homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
