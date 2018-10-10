@@ -4,7 +4,12 @@
 
 # Grant permissions to Cellar directory
 logger -s "Recursively setting user permissions in /usr/local..."
-sudo chown -R $(whoami) /usr/local
+sudo chown -R $(whoami) /usr/local/Cellar
+sudo chown -R $(whoami) /usr/local/bin/brew
+sudo chown -R $(whoami) /usr/local/share/man
+sudo chown -R $(whoami) /usr/local/share/zsh
+sudo chown -R $(whoami) /usr/local/etc/bash_completion.d/brew
+sudo chown -R $(whoami) /usr/local/Homebrew
 
 # Install Homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
