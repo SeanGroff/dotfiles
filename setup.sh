@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
-# grant permissions to execute script
-sudo chmod 755 setup.sh
+# PRE-EXECUTION - sudo chmod 755 setup.sh
+
+# Grant permissions to Cellar directory
+sudo chown -R $(whoami) /usr/local/Cellar
 
 # Install Homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew doctor
-
-# Install command-line tools using Homebrew.
 
 # Make sure we’re using the latest Homebrew.
 brew update
@@ -16,13 +16,11 @@ brew update
 brew upgrade
 
 # Homebrew cask
-brew install caskroom/cask/brew-cask
+brew tap caskroom/cask
 
 # Save Homebrew’s installed location.
 BREW_PREFIX=$(brew --prefix)
 
-# Grant permissions to Cellar directory
-sudo chown -R $(whoami) /usr/local/Cellar
 
 # Install GNU core utilities (those that come with macOS are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
