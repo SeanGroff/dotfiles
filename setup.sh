@@ -10,6 +10,9 @@ sudo chown -R $(whoami) /usr/local/share/man
 sudo chown -R $(whoami) /usr/local/share/zsh
 sudo chown -R $(whoami) /usr/local/etc/bash_completion.d/brew
 sudo chown -R $(whoami) /usr/local/Homebrew
+sudo chown -R $(whoami) /usr/local/var/Homebrew
+sudo chown -R $(whoami) /usr/local/lib/python2.7
+sudo chown -R $(whoami) /usr/local/lib/python3.7
 
 # Install Homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
