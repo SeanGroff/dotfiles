@@ -5,47 +5,38 @@
 # Grant permissions to Cellar directory
 logger -s "Recursively setting user permissions in /usr/local..."
 if [ -d "/usr/local/Cellar" ]; then
-  # Control will enter here if $DIRECTORY exists.
   sudo chown -R $(whoami) /usr/local/Cellar
 fi
 
 if [ -d "/usr/local/bin/brew" ]; then
-  # Control will enter here if $DIRECTORY exists.
   sudo chown -R $(whoami) /usr/local/bin/brew
 fi
 
 if [ -d "/usr/local/share/man" ]; then
-  # Control will enter here if $DIRECTORY exists.
   sudo chown -R $(whoami) /usr/local/share/man
 fi
 
 if [ -d "/usr/local/share/zsh" ]; then
-  # Control will enter here if $DIRECTORY exists.
   sudo chown -R $(whoami) /usr/local/share/zsh
 fi
 
 if [ -d "/usr/local/etc/bash_completion.d/brew" ]; then
-  # Control will enter here if $DIRECTORY exists.
   sudo chown -R $(whoami) /usr/local/etc/bash_completion.d/brew
 fi
 
 if [ -d "/usr/local/Homebrew" ]; then
-  # Control will enter here if $DIRECTORY exists.
   sudo chown -R $(whoami) /usr/local/Homebrew
 fi
 
 if [ -d "/usr/local/var/Homebrew" ]; then
-  # Control will enter here if $DIRECTORY exists.
   sudo chown -R $(whoami) /usr/local/var/Homebrew
 fi
 
 if [ -d "/usr/local/lib/python2.7" ]; then
-  # Control will enter here if $DIRECTORY exists.
   sudo chown -R $(whoami) /usr/local/lib/python2.7
 fi
 
 if [ -d "/usr/local/lib/python3.7" ]; then
-  # Control will enter here if $DIRECTORY exists.
   sudo chown -R $(whoami) /usr/local/lib/python3.7
 fi
 
@@ -64,7 +55,6 @@ brew tap caskroom/cask
 
 # Save Homebrew’s installed location.
 BREW_PREFIX=$(brew --prefix)
-
 
 # Install GNU core utilities (those that come with macOS are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
