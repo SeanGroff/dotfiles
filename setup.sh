@@ -96,7 +96,6 @@ brew install tree
 brew install yarn
 brew install nvm
 brew install neovim
-brew install mongodb
 brew install nginx
 brew install htop
 
@@ -104,9 +103,7 @@ brew install htop
 brew cask install google-chrome
 brew cask install alfred
 brew cask install slack
-brew cask install spotify
-brew cask install visual-studio-code
-brew cask install hyper
+brew cask install alacritty
 brew cask install imageoptim
 brew cask install postman
 brew cask install spectacle
