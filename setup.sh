@@ -101,6 +101,7 @@ brew install yarn
 brew install neovim
 brew install nginx
 brew install htop
+brew install tmux
 
 # Cask Installs
 brew cask install google-chrome
