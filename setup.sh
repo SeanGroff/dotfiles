@@ -77,6 +77,10 @@ sudo -s 'echo /usr/local/bin/zsh >> /etc/shells' && chsh -s /usr/local/bin/zsh
 # ohmyzsh
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 
+# nvm
+mkdir ~/.nvm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+
 # Install `wget` with IRI support.
 brew install wget --with-iri
 
@@ -94,13 +98,13 @@ brew install git
 brew install imagemagick --with-webp
 brew install tree
 brew install yarn
-brew install nvm
 brew install neovim
 brew install nginx
 brew install htop
 
 # Cask Installs
 brew cask install google-chrome
+brew cask install firefox
 brew cask install alfred
 brew cask install slack
 brew cask install alacritty
