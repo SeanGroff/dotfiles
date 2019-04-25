@@ -108,7 +108,7 @@ brew cask install google-chrome
 brew cask install firefox
 brew cask install alfred
 brew cask install slack
-brew cask install alacritty
+brew cask install iterm2
 brew cask install imageoptim
 brew cask install postman
 brew cask install spectacle
